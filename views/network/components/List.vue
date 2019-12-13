@@ -173,6 +173,7 @@ export default {
       groupActions: [
         {
           label: '新建',
+          permission: 'networks_create',
           action: () => {
             this.$router.push({ name: 'NetworkCreate' })
           },
@@ -361,6 +362,7 @@ export default {
               },
               {
                 label: '更改项目',
+                permission: 'networks_perform_change_owner',
                 action: () => {
                   this.createDialog('ChangeOwenrDialog', {
                     data: [obj],
@@ -387,7 +389,7 @@ export default {
                 },
                 meta: () => {
                   return {
-                    validate: this.isPower,
+                    validate: this.isPower(obj),
                   }
                 },
               },
