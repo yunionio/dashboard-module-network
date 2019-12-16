@@ -362,7 +362,7 @@ export default {
               },
               {
                 label: '更改项目',
-                permission: 'networks_perform_change-owner',
+                permission: 'networks_perform_change_owner',
                 action: () => {
                   this.createDialog('ChangeOwenrDialog', {
                     data: [obj],
